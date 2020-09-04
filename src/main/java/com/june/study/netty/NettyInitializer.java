@@ -19,9 +19,6 @@ public class NettyInitializer extends ChannelInitializer {
     @Autowired
     public MyByteEncoder myByteEncoder;
 
-    @Autowired
-    private NettyServerHandler nettyServerHandler;
-
     @Override
     protected void initChannel(Channel channel) throws Exception {
         //创建一个通道初始化对象(匿名对象)

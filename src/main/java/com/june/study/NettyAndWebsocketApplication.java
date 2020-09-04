@@ -16,5 +16,4 @@ public class NettyAndWebsocketApplication {
         NettyServer nettyServer = new NettyServer();
         nettyServer.run();
     }
-
 }

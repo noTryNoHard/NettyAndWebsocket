@@ -6,13 +6,11 @@
 </head>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <body>
-
 <div style="margin-left: 25%;margin-top: 10%">
     <h3>WebSocket测试，客户端接收到的消息如下：</h3>
     <textarea id="messageId" readonly="readonly" cols="150" rows="20"></textarea>
     <input type="button" value="清空内容" onclick="document.getElementById('messageId').value=''">
 </div>
-
 <script type="text/javascript">
     var socket;
     if (typeof (WebSocket) == "undefined") {
@@ -49,7 +47,5 @@
         };
     }
 </script>
-
 </body>
-
 </html>
