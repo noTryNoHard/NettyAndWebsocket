@@ -1,6 +1,5 @@
 package com.june.study.netty;
 
-import cn.hutool.core.util.StrUtil;
 import com.june.study.websocket.controller.WebSocketServer;
 import lombok.extern.slf4j.Slf4j;
 
@@ -18,9 +17,9 @@ public class NettyDataSvervice {
     /**
      * 将传送过来的数据进行解析，包括异或运算 （第一次服务器端给客户端发）
      *
-     * @param ReceiveData
+     * @param ReceiveData 接收数据
      *
-     * @return
+     * @return String
      */
     public static String sendData(String ReceiveData) {
         final ReentrantLock putLock = Lock;

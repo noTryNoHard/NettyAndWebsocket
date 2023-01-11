@@ -20,13 +20,13 @@ import java.util.concurrent.locks.ReentrantLock;
 @ChannelHandler.Sharable
 public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 
-    private static Lock lock_1 = new ReentrantLock();
+    private static final Lock lock_1 = new ReentrantLock();
 
-    private static Lock lock_2 = new ReentrantLock();
+    private static final Lock lock_2 = new ReentrantLock();
 
-    private static Lock lock_3 = new ReentrantLock();
+    private static final Lock lock_3 = new ReentrantLock();
 
-    private static Lock lock_4 = new ReentrantLock();
+    private static final Lock lock_4 = new ReentrantLock();
 
     /**
      * 管理一个全局map，保存连接进服务端的通道数量

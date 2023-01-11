@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 @ChannelHandler.Sharable
 public class MyByteEncoder extends MessageToByteEncoder<byte[]> {
     @Override
-    protected void encode(ChannelHandlerContext channelHandlerContext, byte[] bytes, ByteBuf out) throws Exception {
+    protected void encode(ChannelHandlerContext channelHandlerContext, byte[] bytes, ByteBuf out) {
         log.info("MyByteEncoder 被调用");
         //字节数组
         out.writeBytes(bytes);

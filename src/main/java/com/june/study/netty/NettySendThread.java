@@ -14,9 +14,9 @@ import java.util.Objects;
 @Slf4j
 public class NettySendThread implements Runnable {
 
-    private ChannelHandlerContext ctx;
+    private final ChannelHandlerContext ctx;
 
-    private String data;
+    private final String data;
 
     public NettySendThread(ChannelHandlerContext ctx, String data) {
         this.ctx = ctx;
