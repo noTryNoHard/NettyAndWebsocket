@@ -24,21 +24,21 @@
         //ws对应http、wss对应https。
         socket = new WebSocket("ws://localhost:8080/ws/asset");
         //连接打开事件
-        socket.onopen = function () {
+        socket.onOpen = function () {
             console.log("Socket 已打开");
             // socket.send("消息发送测试(From Client)");
         };
         //收到消息事件
-        socket.onmessage = function (msg) {
+        socket.onMessage = function (msg) {
             $("#messageId").append(msg.data + "\n");
             console.log(msg.data);
         };
         //连接关闭事件
-        socket.onclose = function () {
+        socket.onClose = function () {
             console.log("Socket已关闭");
         };
         //发生了错误事件
-        socket.onerror = function () {
+        socket.onError = function () {
             console.log("Socket发生了错误");
         };
         //窗口关闭时，关闭连接
