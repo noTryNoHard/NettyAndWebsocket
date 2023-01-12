@@ -17,8 +17,8 @@ public class NettyByteAndStringUtils {
         final ReentrantLock putLock = Lock;
         putLock.lock();
         try {
-            String strHex = "";
-            StringBuilder sb = new StringBuilder("");
+            String strHex;
+            StringBuilder sb = new StringBuilder();
             for (byte aByte : bytes) {
                 strHex = Integer.toHexString(aByte & 0xFF);
                 // 每个字节由两个字符表示，位数不够，高位补0
@@ -37,7 +37,7 @@ public class NettyByteAndStringUtils {
         final ReentrantLock putLock = Lock;
         putLock.lock();
         try {
-            int m = 0, n = 0;
+            int m, n;
             // 每两个字符描述一个字节
             int byteLen = hex.length() / 2;
             byte[] ret = new byte[byteLen];
